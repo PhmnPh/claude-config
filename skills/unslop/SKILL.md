@@ -1,9 +1,6 @@
 ---
 name: unslop
 description: "Пишет любой связный текст для человека без следов ИИ, на русском и английском: ответы в чате, описания задач в Jira, описания PR, сообщения коммитов, README, ADR, комментарии в ревью. Применять в момент написания любой прозы, не дожидаясь просьбы. Writes prose without AI tells in Russian and English. Apply while drafting replies, Jira descriptions, PR descriptions, commit messages and docs. Не для кода, докстрингов и комментариев в коде."
-license: MIT
-metadata:
-  sources: "pstack/unslop (Lauren Tan, MIT) для общей идеи и английских правил; humanizer-ru v3.11 (Vladimir-Human, MIT) для русских паттернов"
 ---
 
 # Unslop

@@ -1,6 +1,6 @@
 # English word lists
 
-Source: pstack `unslop` skill by Lauren Tan (MIT). The general rules live in `SKILL.md`; this file holds the vocabulary that only applies to English text.
+The general rules live in `SKILL.md`; this file holds the vocabulary that only applies to English text.
 
 ## AI vocabulary
 
