@@ -1,6 +1,6 @@
 ---
 name: unslop
-description: "Write any prose for humans without AI tells, in Russian or English: chat replies, Jira task descriptions, PR descriptions, commit messages, README, ADR, review comments. Apply while drafting, without waiting to be asked. Not for code, docstrings or code comments."
+description: Cut AI tells from any writing. Must always apply.
 ---
 
 # Unslop
@@ -56,4 +56,4 @@ Language-independent. Word lists live in the references.
 
 ## What not to touch
 
-Code, commands, parameter names, versions, table and column names are written verbatim. Procedure steps stay a numbered list, the lines matter on their own there. A team's professional jargon in chat ("заасайнить таску") is the environment, not a tell. Docstrings and code comments are outside this skill; a separate rule owns them: a comment survives only for a non-obvious "why" the code cannot show.
+Code, commands, parameter names, versions, table and column names are written verbatim. Procedure steps stay a numbered list, the lines matter on their own there. A team's professional jargon in chat ("заасайнить таску") is the environment, not a tell. Docstrings and code comments are outside this skill; the no-comments skill owns them.
