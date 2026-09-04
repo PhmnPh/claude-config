@@ -6,7 +6,6 @@
 !/CLAUDE.md
 !/skills/
 !/agents/
-!/vendor/
 # Omarchy system skills, symlinked into skills/ by the OS. Not ours.
 /skills/omarchy
 /skills/diagnose-crash

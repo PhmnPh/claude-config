@@ -1,3 +1,0 @@
-[submodule "skills/humanizer-ru"]
-	path = vendor/humanizer-ru
-	url = https://github.com/Vladimir-Human/humanizer-ru.git
