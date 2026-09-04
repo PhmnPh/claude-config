@@ -1,0 +1,7 @@
+# Whitelist: only skills and the global CLAUDE.md are versioned.
+# settings.json stays out on purpose: its autoMode block lists internal work hostnames.
+/*
+!/.gitignore
+!/README.md
+!/CLAUDE.md
+!/skills/
