@@ -1,27 +1,46 @@
-# claude-config
+# Agent skills
 
-Personal Claude Code skills. Cloned into `~/.claude` on every machine.
+Personal skills for Claude Code and Codex.
 
-```bash
-git clone git@github.com:PhmnPh/claude-config.git ~/.claude-config
-rsync -a ~/.claude-config/ ~/.claude/
+## Layout
+
+```text
+claude/
+├── agents/
+└── skills/
+
+codex/
+└── skills/
 ```
 
-Or, on a fresh machine before Claude Code creates `~/.claude`:
+Keep shared behavior aligned across both skill trees. Put Claude-specific
+frontmatter and Agent tool instructions under `claude/`. Put Codex-compatible
+frontmatter and subagent instructions under `codex/`.
+
+## Install for Claude Code
+
+Link each Claude skill into `~/.claude/skills` and each agent into
+`~/.claude/agents`.
 
 ```bash
-git clone git@github.com:PhmnPh/claude-config.git ~/.claude
+mkdir -p ~/.claude/skills ~/.claude/agents
+for directory in "$PWD"/claude/skills/*/; do
+  ln -sfn "$directory" ~/.claude/skills/"$(basename "$directory")"
+done
+for file in "$PWD"/claude/agents/*.md; do
+  ln -sfn "$file" ~/.claude/agents/"$(basename "$file")"
+done
 ```
 
+## Install for Codex
 
-Team skills live in the ml-dev plugin repo, not here. A skill moves there once it has proven useful.
-
-## Codex
-
-Codex reads the same SKILL.md format from `~/.codex/skills`. Symlink each skill there once:
+Link each Codex skill into `~/.codex/skills`.
 
 ```bash
-for d in ~/.claude/skills/*/; do ln -sfn "$d" ~/.codex/skills/$(basename "$d"); done
+mkdir -p ~/.codex/skills
+for directory in "$PWD"/codex/skills/*/; do
+  ln -sfn "$directory" ~/.codex/skills/"$(basename "$directory")"
+done
 ```
 
-Claude Code subagents live in `agents/`; Codex has no such directory, so `comment-sicko` also exists as a skill and is delegated to with `$comment-sicko`.
+Restart or open a new task after changing installed skills.

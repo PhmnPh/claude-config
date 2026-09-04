@@ -1,11 +1,12 @@
-# Whitelist: only skills and the global CLAUDE.md are versioned.
 # settings.json stays out on purpose: its autoMode block lists internal work hostnames.
 /*
 !/.gitignore
 !/README.md
 !/CLAUDE.md
-!/skills/
-!/agents/
+!/claude/
+!/claude/**
+!/codex/
+!/codex/**
 # Omarchy system skills, symlinked into skills/ by the OS. Not ours.
-/skills/omarchy
-/skills/diagnose-crash
+/claude/skills/omarchy
+/claude/skills/diagnose-crash
