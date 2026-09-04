@@ -13,7 +13,7 @@ Or, on a fresh machine before Claude Code creates `~/.claude`:
 git clone --recurse-submodules git@github.com:PhmnPh/claude-config.git ~/.claude
 ```
 
-`skills/humanizer-ru` is a submodule tracking https://github.com/Vladimir-Human/humanizer-ru. Update it with `git submodule update --remote --merge`.
+`vendor/humanizer-ru` is a submodule tracking https://github.com/Vladimir-Human/humanizer-ru. Update it with `git submodule update --remote --merge`. `skills/humanizer-ru` is a thin wrapper with `disable-model-invocation: true`, so the skill stays out of the model prompt and runs only on `/humanizer-ru`.
 
 Team skills live in the ml-dev plugin repo, not here. A skill moves there once it has proven useful.
 
